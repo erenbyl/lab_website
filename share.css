@@ -1,0 +1,10 @@
+.social-share {
+    margin-top: 20px;
+}
+
+    .social-share a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
