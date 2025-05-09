@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Listesi - Akıllı Malzemeler Laboratuvarı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #003087;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #003087;
+            color: white;
+        }
+        tr:nth-child(even) {background-color: #f9f9f9;}
+        tr:hover {background-color: #f5f5f5;}
+        .description {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #003087;
+            margin: 10px 0;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .description.highlight {
+            background-color: #e0f7fa;
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003087;
+            color: white;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function scrollToDescription(id) {
+            // Seçilen projeye kaydırma işlemi yapacak fonksiyon
+            var element = document.getElementById(id);
+            window.scrollTo({
+                top: element.offsetTop - 50, // Başlık kısmını geçmemek için biraz yukarıda duracak
+                behavior: "smooth"
+            });
+
+            // Önceki açıklamaları normal hale getir
+            var descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(function(desc) {
+                desc.classList.remove('highlight');
+            });
+
+            // Şu an tıklanan projeyi vurgula
+            element.classList.add('highlight');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">Uludağ Üniversitesi Mühendislik Fakültesi - Proje Listesi</div>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Proje No</th>
+                <th>Proje Adı</th>
+                <th>Başlama Tarihi</th>
+                <th>Proje Durumu</th>
+            </tr>
+            <tr>
+                <td>224M051</td>
+                <td><a href="javascript:void(0)" onclick="scrollToDescription('projedecription224M051')">Ohmik Isınma Özelliğine Sahip Sürekli Karbon Lifler İçeren Çimentolu Kompozitlerin Geliştirilmesi Ve Performanslarının Değerlendirilmesi</a></td>
+                <td>26/11/2024</td>
+                <td>Yürürlükte</td>
+            </tr>
+            <tr>
+                <td>FGA-2025-2027</td>
+                <td><a href="javascript:void(0)" onclick="scrollToDescription('projedecriptionFGA20252027')">Geri Dönüştürülmüş Karbon Lif Kullanarak Kendi Alglama Kendini Isıtma ve Elektromanyetik Dalga Kalkınlama Özelliklerine Sahip Çok Fonksiyonlu Akıllı Çimentolu Kompozit Geliştirilmesi</a></td>
+                <td>15.04.2025</td>
+                <td>Yürürlükte</td>
+            </tr>
+            <tr>
+                <td>FBG-2024-1839</td>
+                <td><a href="javascript:void(0)" onclick="scrollToDescription('projedecriptionFBG20241839')">Betonarme Elemanlara Kendinden Gerilme Alglama Özelliğinin Kazandırılması</a></td>
+                <td>20.05.2024</td>
+                <td>Yürürlükte</td>
+            </tr>
+            <tr>
+                <td>FGA-2024-1745</td>
+                <td><a href="javascript:void(0)" onclick="scrollToDescription('projedecriptionFGA20241745')">İki Boyutlu Grafen ve Metal Kalkojen Tabanlı Mikro-Nano Sistemlerin Geliştirilmesi ve Uygulamaları</a></td>
+                <td>12.03.2024</td>
+                <td>Yürürlükte</td>
+            </tr>
+        </table>
+
+        <!-- Proje Açıklamaları -->
+        <div class="description" id="projedecription224M051">
+            <h3>Ohmik Isınma Özelliğine Sahip Sürekli Karbon Lifler İçeren Çimentolu Kompozitlerin Geliştirilmesi Ve Performanslarının Değerlendirilmesi</h3>
+            <p>Bu projeyle, çimentolu kompozitlerin geleceğini şekillendirecek bir adım atılacak. Kendini algılama, elektromanyetik dalga soğurma ve kalkanlama gibi birçok alanda devrim niteliğinde uygulamalar sunan bu yenilikçi teknoloji, akıllı malzemelerin geliştirilmesine yönelik akademik çıktılar üretmek için önemli bir fırsat yaratacak. Çimentolu malzemelerin ısıtma alanında nasıl bir devrim yaratabileceği, bu projeyle daha net bir şekilde ortaya çıkacak.
+
+Projenin temel hedefi, sürekli lifli ve kesikli lifli çimentolu kompozitlerin Ohmik ısıtma performanslarını etkileyen parametreleri değerlendirerek, enerji verimli ve çevre dostu çözümler üretmektir. Su/Çimento oranı, agrega/çimento oranı, agrega varlığı ve lif konfigürasyonları gibi önemli faktörlerin etkisi testlerle analiz edilecektir. Ayrıca, kar ve buzun hızlı bir şekilde yüzeylerden uzaklaştırılmasında Ohmik ısıtma yöntemlerinin nasıl kullanılabileceği araştırılacak, bu sayede buzlanma ve kış şartlarında enerji verimli çözümler sunulacaktır.
+
+Gerçekleştirilecek testlerle, farklı akım koşullarında yüzeysel ve hacimsel ısınma performansları belirlenecek ve çeşitli lif konfigürasyonlarının ısıtma üzerindeki etkileri ortaya konulacaktır. Bu, sadece ısıtma teknolojilerine katkı sağlamakla kalmayacak, aynı zamanda geleneksel buz çözme yöntemlerinin çevreye olan olumsuz etkilerini azaltmaya yönelik önemli bir adım olacaktır.
+
+Bu proje, aynı zamanda alanında etkili dergilerde yayınlanma potansiyeli taşıyan araştırma konularını da gündeme getirecek. Sürekli ve kesikli lif konfigürasyonlarının Ohmik ısıtma üzerindeki etkisi, agrega varlığının performansa olan katkıları gibi konular, bilim dünyasında büyük ilgi görecektir.
+
+</p>
+        </div>
+        <div class="description" id="projedecriptionFGA20252027">
+            <h3>Geri Dönüştürülmüş Karbon Lif Kullanarak Kendi Alglama Kendini Isıtma ve Elektromanyetik Dalga Kalkınlama Özelliklerine Sahip Çok Fonksiyonlu Akıllı Çimentolu Kompozit Geliştirilmesi</h3>
+            <p>
+Teknolojik gelişmeler ile birlikte, insanoğlu tarafından bir ihtiyacı gidermeye yönelik kullanılan malzemelerin yerini, aynı anda birden fazla işlevi olan “çok fonksiyonlu” malzemeler almaktadır. Çimento esaslı malzemeler de mekanik yük taşıma ve çevresel etkilere direnme yeteneklerinin yanında, yapısal olmayan birtakım işlevler kazanabilmektedir. Çimentolu malzemenin elektriksel özelliklerinin iyileştirilmesi ile birçok yeni işlev bu malzemelerin tercih edildiği uygulamalara kazandırılabilir. Malzeme bünyesindeki birim şekil değiştirme ile elektriksel özelliklerde yaşanan değişimler arasında ilişki kurulması ve gerekli tepkilerin verilmesi “kendini algılama”, Joule prensibine dayanarak iletken malzeme içerisinden akım geçişi ile yüzeylerin ısıtılması “kendini ısıtma” ve oluşturulan ortamlardan elektromanyetik dalga geçişinin engellenmesi “elektromanyetik dalga kalkanlama” olarak adlandırılan teknolojilerdir. Sıralanan bu teknolojiler çimentolu kompozitlerde çeşitli katkıların kullanımıyla birlikte elektriksel iletkenlik özelliklerinin iyileştirilmesiyle verimli şekilde uygulanabilir. İletkenlik özelliği çoğunlukla çeşitli boyutlarda karbonlu, nikel bazlı, çelik gibi ürünlerin çimentolu kompozit matrisine lif veya tanecik halinde katılmasıyla elde edilmektedir. Bu malzemeler bazı durumlarda endüstriyel süreçlerin yan ürünleri halinde olurken bazı durumlarda ise amaca uygun kullanım için üretilirler. Bu projede ise çimentolu kompozitlere kendini algılama, kendini ısıtma ve elektromanyetik dalga kalkanlama özellikleri eklenerek, akıllı kompozitler üretilmesi hedeflenmektedir.
+
+Bu çalışma kapsamında çimentolu kompozitlere elektriksel iletkenlik kazandırılması amacıyla çeşitli yöntemler ile geri dönüştürülmüş kesikli karbon lifler (GDKL) kullanılacaktır. Oluşturulan kompozitlerin basınç dayanımları, kendini algılama, kendini ısıtma ve elektromanyetik dalga kalkanlama performansları uygun test düzeneklerinde belirlenecektir. Oluşturulan çimento esaslı malzemelerde geri dönüştürme yöntemlerinin gözlenecek performanslar üzerine etkileri araştırılacaktır. Ayrıca karbon liflerin yüzey durumunun incelenecek performanslar üzerine etkisi de değerlendirilecektir. Servis ömürlerini dolduran karbon liflerin potansiyel geri kazanımıyla birlikte sürdürülebilir faaliyetlere katkı sağlanacaktır. Atık liflerin çimento esaslı malzemelerde kendini algılama, kendini ısıtma ve elektromanyetik dalga kalkanlama uygulamalarında kullanımıyla birlikte ilgili malzemeler çok fonksiyonluluğa sahip olacaktır. Sürdürülebilir niteliğe sahip atık lifli çimentolu kompozitler geliştirilecektir.</p>
+        </div>
+        <div class="description" id="projedecriptionFBG20241839">
+            <h3>Betonarme Elemanlara Kendinden Gerilme Alglama Özelliğinin Kazandırılması</h3>
+            <p>
+Çalışmanın amacı kendini algılayan beton teknolojisinin ülkemizde gerçekleştirilecek akıllı uygulamalarda yaygınlaştırılması, inşaat endüstrisinde konum edinmesi ve üniversitemizin bu konuda öncü rol oynamasıdır. Yapısal özelliklerin incelenerek, içerisinde bulunduğu koşulların tespit edilmesi ve değerlendirilmesi, ardından gerekli önlemlerin alınması, sürdürülebilir üretimin ve kullanımın sağlanması, güvenlik, ekonomik kaynakların etkin kullanımı ve enerji verimliliğin iyileştirilmesi açısından kritiktir. Yapılacak incelemelerde kullanılan malzemeler arası ve ölçüm yöntemleri arasındaki farklar ortaya konup etkinlikleri kıyaslanacaktır. Proje kapsamında, maliyeti yüksek olan karbon lifinin kullanım ömrünü tamamladıktan sonra, ekonomiye yeniden kazandırılması amacıyla malzemenin öğütülerek betonarme yapı elemanları içinde kullanılması planlanmaktadır. Gerilme ve elektriksel değerler arasındaki ilişkiyi ardılları ve direnç değerleriyle ilişkilendirerek ele alacaktır. Bu sayede, yapısal gerilme değişimleri ile elektriksel özellikler arasındaki etkileşim anlaşılır bir şekilde ortaya konarak, tasarım ve malzeme mühendisliği alanındaki bilgiye katkı sağlanması amaçlanmaktadır. Proje kapsamında, karbon lifi içeren katkılı betonların dayanım ve dayanıklılık özellikleri de detaylı bir şekilde belirlenecektir. Bu çerçevede, betonun mekanik özelliklerini değerlendirmek amacıyla basınç ve eğilme testleri gerçekleştirilecektir. Ayrıca, yapı malzemelerinin maruz kalabileceği çeşitli çevresel etkileri anlamak için yüksek sıcaklık, klor iyonu geçirgenliği, alkali silika reaksiyonu ve donma-çözünme testleri uygulanacaktır. Bu testler, katkılı betonun genel dayanıklılığını ve özel çevresel koşullara karşı direncini değerlendirmeye yönelik kapsamlı bir yaklaşım sunacaktır. Elde edilen veriler, malzeme mühendisliği alanındaki tasarım ve uygulama süreçlerini optimize etmek amacıyla kullanılacaktır.</p>
+        </div>
+        <div class="description" id="projedecriptionFGA20241745">
+            <h3>İki Boyutlu Grafen ve Metal Kalkojen Tabanlı Mikro-Nano Sistemlerin Geliştirilmesi ve Uygulamaları</h3>
+            <p>
+Karbon atomlarının iki boyutlu (2B) formu olan grafen sahip olduğu eşsiz özelliklerinden dolayı buluşçularına Nobel Bilim ödülü kazandırmıştır. Bu durum yıllar içerisinde farklı 2B malzemelerin geliştirilmesinin de yolunu açarak son zamanların popüler araştırmalarında ve buluşlarında kendini göstermektedir. Gelinen noktada mevcut veya yeni malzemelerin 2B yapısındaki ilginç özellikleri nedeniyle gerek malzeme üretme tekniklerindeki çalışmalar gerekse farklı alanlardaki uygulamaları halen en fazla araştırılan konuların içinde yer almaktadır.
+
+Grafenin yasak enerji aralığının olmaması (özel durumlarda ise yok denecek kadar az) onun tek başına fotonik uygulamalarındaki uygulamalarını kısıtlamaktadır. Grafenden sonra türetilen 2B malzemelerin, geniş bant optik tepkisi, güçlü ve ayarlanabilir ışık-madde etkileşimleri ve nano ölçekteki uygulama esnekliği gibi çeşitli optoelektronik özellikler sergilediği gösterilmiştir. Bu nedenle projede optik özellikleri eşsiz metal kalkojen tabanlı 2B malzemelerin büyütülmesi, katman sayılarına göre homo 2B malzemeler; katman sayılarına göre hetero 2B malzemelerin üretilmesi hedeflenmektedir. 2B malzemelerin üretim süreçleri öncesi alttaş yüzeylerinin fonksiyonelleştirilmesi ve 2B malzemelerin oksidasyon kaynaklı performanslarının muhafaza edilebilmesi için ultra ince pasivasyon kaplamaları yapılması planlanmaktadır. Elde edilecek malzemelerin yapısal ve optik özellikleri ilk iki iş paketinde karakterize edilecektir. Son olarak elde edilen homo/hetero 2B yapılar ve bunlar kullanılarak üretilecek farklı kompozitlerin fotodedektör, fotonik sensör ve diğer mühendislik uygulamalarına entegrasyonu beklenmektedir.</p>
+        </div>
+    </div>
+    <div class="footer">Akıllı Malzemeler Laboratuvarı &copy; 2025</div>
+</body>
+</html>
